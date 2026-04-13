@@ -5,7 +5,7 @@ function Hero() {
       className="relative isolate overflow-hidden bg-contain lg:bg-cover"
       style={{
         backgroundImage:
-          "linear-gradient(90deg, rgba(25,17,12,0.82) 0%, rgba(25,17,12,0.58) 44%, rgba(25,17,12,0.22) 100%), url('/webp/herobg.webp')",
+          "linear-gradient(90deg, rgba(25,17,12,0.82) 0%, rgba(25,17,12,0.58) 34%, rgba(25,17,12,0.22) 100%), url('/webp/herobg.webp')",
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
@@ -27,23 +27,23 @@ function Hero() {
           </p>
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <a href="#products" className="button-primary">
-              Shop now
+              View all products
             </a>
             <a href="#about" className="button-secondary">
-              Explore blends
+              Visit store now
             </a>
           </div>
         </d>
 
         <div className="relative z-10 hidden lg:justify-self-end lg:block">
-          <div className="glass-panel max-w-sm p-6 text-white">
-            <p className="text-xs uppercase tracking-[0.28em] text-white/65">Why Choose Us</p>
+          {/* <div className="glass-panel max-w-sm p-6 text-white"> */}
+            {/* <p className="text-xs uppercase tracking-[0.28em] text-white/65">Why Choose Us</p> */}
             <div className="mt-5 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
               <StatCard value="100% Natural" label="No additives, no preservatives" />
               <StatCard value="Authentic Taste" label="Traditional recipes, rich flavour" />
               <StatCard value="Ready to Cook" label="Quick, easy & consistent results" />
             </div>
-          </div>
+          {/* </div> */}
         </div>
       </div>
     </section>
@@ -52,9 +52,9 @@ function Hero() {
 
 function StatCard({ value, label }) {
   return (
-    <div className="rounded-[1.5rem] border border-white/14 bg-white/8 p-4 backdrop-blur-sm">
-      <p className="font-display text-3xl">{value}</p>
-      <p className="mt-2 text-sm leading-6 text-white/72">{label}</p>
+    <div className="rounded-[1.5rem] border border-white/14 bg-white/70 p-4 backdrop-blur-sm">
+      <p className="font-display font-semibold text-[var(--ink)] text-3xl">{value}</p>
+      <p className="mt-2 text-sm leading-6 text-[var(--ink)]">{label}</p>
     </div>
   );
 }

@@ -2,7 +2,7 @@ export const siteLinks = [
   { label: "Home", href: "#home" },
   { label: "Collections", href: "#products" },
   { label: "Best Sellers", href: "#bestsellers" },
-  { label: "Recipes", href: "#recipes" },
+  { label: "View All Products", href: "#recipes" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];

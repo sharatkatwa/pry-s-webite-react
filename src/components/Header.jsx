@@ -13,7 +13,7 @@ function Header({ menuOpen, setMenuOpen }) {
           </div>
         {/* </a> */}
 
-        <nav className="hidden items-center gap-8 text-sm font-medium text-black/80 lg:flex">
+        <nav className="hidden items-center gap-8 text-sm font-medium text-[var(--ink)] lg:flex">
           {siteLinks.map((link) => (
             <a key={link.href} href={link.href} className="transition hover:text-[var(--brand-deep)]">
               {link.label}

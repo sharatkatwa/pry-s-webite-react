@@ -20,7 +20,7 @@ const promises = [
 
 function TrustBar() {
   return (
-    <section className="mx-auto max-w-7xl px-5 py-6 lg:px-8">
+    <section className="mx-auto max-w-7xl px-5 py-6 lg:px-8 lg:hidden">
       <div className="grid gap-4 rounded-[2rem] bg-white p-4 shadow-[0_24px_60px_rgba(73,45,29,0.08)] sm:grid-cols-2 xl:grid-cols-3 xl:p-6">
         {promises.map((promise) => {
           const Icon = promise.icon;
