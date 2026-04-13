@@ -2,7 +2,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative isolate overflow-hidden"
+      className="relative isolate overflow-hidden bg-contain lg:bg-cover"
       style={{
         backgroundImage:
           "linear-gradient(90deg, rgba(25,17,12,0.82) 0%, rgba(25,17,12,0.58) 44%, rgba(25,17,12,0.22) 100%), url('/webp/herobg.webp')",
@@ -35,7 +35,7 @@ function Hero() {
           </div>
         </d>
 
-        <div className="relative z-10 lg:justify-self-end">
+        <div className="relative z-10 hidden lg:justify-self-end lg:block">
           <div className="glass-panel max-w-sm p-6 text-white">
             <p className="text-xs uppercase tracking-[0.28em] text-white/65">Why Choose Us</p>
             <div className="mt-5 grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
