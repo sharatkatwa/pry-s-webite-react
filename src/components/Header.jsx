@@ -3,7 +3,7 @@ import { siteLinks } from "../data/homepage";
 
 function Header({ menuOpen, setMenuOpen }) {
   return (
-    <header className="sticky top-0 z-50  border-white/50 bg-[rgba(248,241,234,0.36)] backdrop-blur-xl">
+    <header className="sticky top-0 z-50 bg-[rgba(248,241,234,0.36)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
         {/* <a href="#home" className="font-display text-2xl tracking-[0.08em] text-[var(--brand-deep)]"> */}
           {/* Pry&apos;s Masala */}
@@ -13,7 +13,7 @@ function Header({ menuOpen, setMenuOpen }) {
           </div>
         {/* </a> */}
 
-        <nav className="hidden items-center gap-8 text-sm font-medium text-[var(--muted)] lg:flex">
+        <nav className="hidden items-center gap-8 text-sm font-medium text-black/80 lg:flex">
           {siteLinks.map((link) => (
             <a key={link.href} href={link.href} className="transition hover:text-[var(--brand-deep)]">
               {link.label}
