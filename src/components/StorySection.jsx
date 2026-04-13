@@ -4,7 +4,7 @@ function StorySection() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-18 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
         <div className="relative overflow-hidden rounded-[2rem]">
           <img
-            src="https://images.unsplash.com/photo-1670774544351-96d2464fd873?auto=format&fit=crop&w=1200&q=80"
+            src="/webp/gradma.webp"
             alt="A hand holding whole spices over a scale"
             className="h-full min-h-[420px] max-h-[600px] w-full object-cover"
           />
