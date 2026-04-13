@@ -37,28 +37,28 @@ export const products = [
     detail: "Mild heat, vivid color",
     price: "₹80.00",
     image:
-      "/public/webp/chicken-readyBig.webp",
+      "./public/webp/chicken-readyBig.webp",
   },
   {
     name: "Pry's ready to cook mutton masala",
     detail: "High-curcumin content",
     price: "₹80",
     image:
-      "/public/webp/mutton-big.webp",
+      "./public/webp/mutton-big.webp",
   },
   {
     name: "Pry's speacial garam masala",
     detail: "12-spice house blend",
     price: "₹80",
     image:
-      "/public/webp/garambig.webp",
+      "./public/webp/garambig.webp",
   },
   {
     name: "Pry's sunday special masala",
     detail: "make anything tastier with it",
     price: "₹80",
     image:
-      "/public/webp/sundaybig.webp",
+      "./public/webp/sundaybig.webp",
   },
 ];
 
