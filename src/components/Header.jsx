@@ -9,7 +9,7 @@ function Header({ menuOpen, setMenuOpen }) {
           {/* Pry&apos;s Masala */}
           <div className="w-20 overflow-hidden flex">
 
-          <img src="/public/webp/logo.png" className="object-contain object-center" alt="" />
+          <img src="/webp/logo.png" className="object-contain object-center" alt="" />
           </div>
         {/* </a> */}
 
