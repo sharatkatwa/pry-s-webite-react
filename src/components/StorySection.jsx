@@ -4,9 +4,9 @@ function StorySection() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-18 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
         <div className="relative overflow-hidden rounded-[2rem]">
           <img
-            src="/webp/gradma.webp"
+            src="/webp/grandmaUpdated.webp"
             alt="A hand holding whole spices over a scale"
-            className="h-full min-h-[420px] max-h-[600px] w-full object-cover"
+            className=" min-h-[420px] max-h-[600px] w-full object-cover"
           />
           <div className="absolute bottom-5 left-5 rounded-2xl bg-[rgba(123,42,28,0.92)] px-5 py-4 text-white shadow-[0_22px_50px_rgba(69,22,12,0.28)]">
             <p className="font-display text-2xl">Since 1924</p>
