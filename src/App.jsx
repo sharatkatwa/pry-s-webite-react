@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -8,9 +8,30 @@ import SectionShell from "./components/SectionShell";
 import StorySection from "./components/StorySection";
 import TrustBar from "./components/TrustBar";
 import { collections, products, recipes } from "./data/homepage";
+import Lenis from "@studio-freight/lenis";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+     const lenis = new Lenis({
+      duration: 1.1, // smoothness
+      lerp: 0.08,
+      smoothWheel: true,
+      smoothTouch: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
 
   return (
     <div className="bg-[var(--canvas)] text-[var(--ink)]">
