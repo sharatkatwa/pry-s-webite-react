@@ -5,7 +5,7 @@ function Hero() {
       className="relative isolate overflow-hidden"
       style={{
         backgroundImage:
-          "linear-gradient(90deg, rgba(25,17,12,0.82) 0%, rgba(25,17,12,0.58) 44%, rgba(25,17,12,0.22) 100%), url('public/webp/herobg.webp')",
+          "linear-gradient(90deg, rgba(25,17,12,0.82) 0%, rgba(25,17,12,0.58) 44%, rgba(25,17,12,0.22) 100%), url('/webp/herobg.webp')",
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
