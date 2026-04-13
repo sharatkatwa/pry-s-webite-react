@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -12,14 +12,16 @@ import Lenis from "@studio-freight/lenis";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const lenisRef = useRef(null);
 
   useEffect(() => {
-     const lenis = new Lenis({
+    const lenis = new Lenis({
       duration: 1.1, // smoothness
       lerp: 0.08,
       smoothWheel: true,
       smoothTouch: false,
     });
+    lenisRef.current = lenis;
 
     function raf(time) {
       lenis.raf(time);
@@ -29,13 +31,14 @@ function App() {
     requestAnimationFrame(raf);
 
     return () => {
+      lenisRef.current = null;
       lenis.destroy();
     };
   }, []);
 
   return (
     <div className="bg-[var(--canvas)] text-[var(--ink)]">
-      <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Header lenisRef={lenisRef} menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
       <main>
         <Hero />

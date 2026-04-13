@@ -1,23 +1,43 @@
 import { Menu, Search, ShoppingBag } from "lucide-react";
 import { siteLinks } from "../data/homepage";
 
-function Header({ menuOpen, setMenuOpen }) {
+function Header({ lenisRef, menuOpen, setMenuOpen }) {
+  const handleNavigate = (href) => {
+    if (lenisRef?.current) {
+      lenisRef.current.scrollTo(href);
+      setMenuOpen(false);
+      return;
+    }
+
+    const target = document.querySelector(href);
+
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+
+    setMenuOpen(false);
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-[rgba(248,241,234,0.36)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
         {/* <a href="#home" className="font-display text-2xl tracking-[0.08em] text-[var(--brand-deep)]"> */}
-          {/* Pry&apos;s Masala */}
-          <div className="w-20 overflow-hidden flex">
-
+        {/* Pry&apos;s Masala */}
+        <div className="w-20 overflow-hidden flex">
           <img src="/webp/logo.png" className="object-contain object-center" alt="" />
-          </div>
+        </div>
         {/* </a> */}
 
         <nav className="hidden items-center gap-8 text-sm font-medium text-[var(--ink)] lg:flex">
           {siteLinks.map((link) => (
-            <a key={link.href} href={link.href} className="transition hover:text-[var(--brand-deep)]">
+            <button
+              type="button"
+              key={link.href}
+              onClick={() => handleNavigate(link.href)}
+              className="cursor-pointer transition hover:text-[var(--brand-deep)]"
+            >
               {link.label}
-            </a>
+            </button>
           ))}
         </nav>
 
@@ -49,7 +69,10 @@ function Header({ menuOpen, setMenuOpen }) {
                 key={link.href}
                 href={link.href}
                 className="py-3 text-base text-[var(--muted)] transition hover:text-[var(--brand-deep)]"
-                onClick={() => setMenuOpen(false)}
+                onClick={(event) => {
+                  event.preventDefault();
+                  handleNavigate(link.href);
+                }}
               >
                 {link.label}
               </a>
